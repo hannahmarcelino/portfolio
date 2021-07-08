@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Marcelino</title>
+    <link rel="icon" href="./assets/icons/my-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="header-content item-1">
+                <a href="#home" class="font-raleway black">home</a>
+                <a href="#about" class="font-raleway black">about</a>
+                <a href="#portfolio" class="font-raleway black">portfolio</a>
+            </div>
+            <div class="header-content item-2">
+                <a href="#home" class="font-shrikhand black header-title">hannahmarcelino.</a>
+            </div>
+            <div class="header-content item-3">
+                <a href="#contact-me" class="font-raleway black">contact me</a>
+                <a href="#socials" class="font-raleway black">more</a>
+            </div>
+        </header>
+        
+        <section id="home">
+            <div class="home-contents">
+                <div class="home-text">
+                    <h1 class="font-shrikhand">Creativity that meets your expectations</h1>
+                    <p class="font-raleway dark-gray">Designs that turn your great ideas into reality.</p>
+                    <button class="font-raleway-bold">
+                        <div class="button-contents">
+                            <a href="#portfolio" class="black">Explore my works</a> 
+                            <div class="material-icons-outlined animate__animated animate__fadeInLeft">
+                                arrow_forward
+                            </div>
+                        </div></button>
+                </div>
+                <div class="home-illustration">
+                    <img class="animate__animated animate__pulse animate__infinite	infinite" src="./assets/images/pixeltrue-welcome.svg" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="about-contents">
+                <img src="./assets/images/about-photo.svg">
+                <div class="about-content">
+                    <h1 class="font-shrikhand white">who is <span class="yellow">hannah marcelino</span>?</h1>
+                    <p class="font-raleway light-gray">Hello! Hannah Marcelino is an artist and a web developer aspirant.</p>
+                    <p class="font-raleway light-gray">For a long time, arts and technology has been her getaway and a necessity as she sail on her life's journey. It gave her joy in creating new, unique and beautiful kind of experience digitally or not. So, why not build others' a better one?</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio">
+            <img src="./assets/images/pixeltrue-idea.svg" class="animate__animated animate__shakeY animate__slower	3s animate__infinite	infinite">
+            <h1 class="font-shrikhand white">explore my <span class="yellow">works</span> </h1>
+        </section>
+
+        <section id="portfolio-extend">
+            <h1 class="font-shrikhand black">artworks</h1>
+            <div class="images">
+                <div><img src="./assets/images/1.jpg"></div>
+                <div><img src="./assets/images/2.png"></div>
+                <div><img src="./assets/images/3.jpg"></div>
+                <div><img src="./assets/images/4.png"></div>
+            </div>
+        </section>
+        
+        <div class="yellow-div"></div>
+
+        <div id="contact-me">
+            <div class="about-contents">
+                <img src="./assets/images/pixeltrue-business-meeting.svg">
+                <div class="about-content">
+                    <h1 class="font-shrikhand white">contact <span class="black">me</span></h1>
+                    <input type="text" placeholder="Name" class="font-raleway">
+                    <input type="text" placeholder="Email Address" class="font-raleway">
+                    <textarea placeholder="Message" class="font-raleway" rows="4" cols="50"></textarea>
+                    <input type="button" value="Send" class="font-raleway-bold white">
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div id="socials">
+                <div class="social-contents">
+                    <div class="social-content">
+                        <img src="./assets/images/fb.png" alt="facebook">
+                        <p class="font-raleway white">Hannah Marcelino</p>
+                    </div>
+                    <div class="social-content">
+                        <img src="./assets/images/ig.png" alt="instagram">
+                        <p class="font-raleway white">art.by.hosannah</p>
+                    </div>
+                    <div class="social-content">
+                        <img src="./assets/images/twt.png" alt="twitter">
+                        <p class="font-raleway white">artbyhosannah</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll <= 0){
+                body.classList.remove('scroll-up')
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains('scroll-down')){
+                body.classList.remove('scroll-up')
+                body.classList.add('scroll-down')
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains('scroll-down')){
+                body.classList.remove('scroll-down')
+                body.classList.add('scroll-up')
+            }
+
+            lastScroll = currentScroll;
+        })
+    </script>
+</body>
+</html>
